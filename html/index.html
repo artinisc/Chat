@@ -11,14 +11,11 @@
         <div id = logo></div>
       </header>
       <div id = "area-mensagens">
-        <div class="msg-atendente">
-          <div class="autor">Atendente diz:</div>
-          <div class="texto">Blabla blabla blablabla</div>
-        </div>
-        <div class="msg-usuario">
-          <div class="autor">Você diz:</div>
-          <div class="texto">Blabla blabla blablabla</div>
-        </div>  
+        <div class="msg-atendente">Atendente diz:</div>
+        <div class="txt-atendente">Blabla blabla blablabla</div>
+
+        <div class="msg-usuario">Você diz:</div>
+        <div class="txt-usuario">Blabla blabla blablabla</div> 
       </div>
       <footer>
         <form>
@@ -33,17 +30,17 @@
       function addMsg(){
         const novaMsg = document.getElementById("campo-msg").value;
 
-        let div = document.createElement("div");
         let divAut = document.createElement("div");
         let divTxt = document.createElement("div");
 
         divAut.innerHTML = `${"Você diz:"}`;
-        divTxt.innerHTML = `${novaMsg.value}`;
+        divTxt.innerHTML = `${novaMsg}`;
+        divAut.className = 'msg-usuario';
+        divTxt.className = 'txt-usuario';
 
         const novaDiv = document.getElementById("area-mensagens");
         novaDiv.appendChild(divAut);
         novaDiv.appendChild(divTxt);
-
       }
     </script> 
   </body>
