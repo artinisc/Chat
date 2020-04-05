@@ -29,6 +29,8 @@
     <script type="text/javascript">
       function addMsg(){
         const novaMsg = document.getElementById("campo-msg").value;
+        var apagaMsg = document.getElementById("campo-msg");
+        apagaMsg.value = "";
 
         let divAut = document.createElement("div");
         let divTxt = document.createElement("div");
