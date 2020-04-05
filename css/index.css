@@ -6,7 +6,8 @@ body{
 
 #area-chat{
     min-height: 90vh;
-    width: 50%;
+    width: 40%;
+    min-width: 310px;
     margin-top: 3%;
     margin-left: 25%;
     margin-right: 25%;
@@ -40,6 +41,7 @@ header{
 }
 
 .msg-atendente{
+    width: 96%;
     margin-top: 1.3%;
     margin-left: 2%;
 }
@@ -56,20 +58,20 @@ footer{
     margin-left: 2%;
 }
 
-#area-digitar fieldset{
-    height: 10%;
-    width: 96%;
+#area-digitar{
+    height: 40%;
+    min-width: 30vw;
     margin-top: 1.3%;
     background-color: rgb(255, 255, 255);
 }
 
 #campo-msg{
-    width: 70%;
+    width: 60%;
     margin-top: 0.3%;
 }
 
 #bt-enviar{
-    margin-left: 13%;
+    float: right;
     width: 100px;
     margin-top: 0.3%;
 }

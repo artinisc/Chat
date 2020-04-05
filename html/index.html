@@ -21,13 +21,30 @@
         </div>  
       </div>
       <footer>
-        <form id="area-digitar" action="" method="post">
-          <fieldset>
+        <form>
+          <fieldset id="area-digitar">
             <input type="text" name="msg" id="campo-msg" placeholder="Digite sua mensagem..." />
-            <button type="submit" id = "bt-enviar">ENVIAR</button>
+            <button type="button" id="bt-enviar" onclick="addMsg()">ENVIAR</button>
           </fieldset>
         </form>
       </footer>
     </div>
+    <script type="text/javascript">
+      function addMsg(){
+        const novaMsg = document.getElementById("campo-msg").value;
+
+        let div = document.createElement("div");
+        let divAut = document.createElement("div");
+        let divTxt = document.createElement("div");
+
+        divAut.innerHTML = `${"Você diz:"}`;
+        divTxt.innerHTML = `${novaMsg.value}`;
+
+        const novaDiv = document.getElementById("area-mensagens");
+        novaDiv.appendChild(divAut);
+        novaDiv.appendChild(divTxt);
+
+      }
+    </script> 
   </body>
 </html>
